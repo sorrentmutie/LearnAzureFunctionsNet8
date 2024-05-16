@@ -18,7 +18,7 @@ namespace LearnFunctions
         {
             ILogger logger = context.CreateReplaySafeLogger(nameof(MySecondDurable));
             logger.LogInformation("Saying hello.");
-            TimeSpan timeout = TimeSpan.FromSeconds(10);
+            TimeSpan timeout = TimeSpan.FromSeconds(20);
             DateTime deadline = context.CurrentUtcDateTime.Add(timeout);
 
             using (var cts = new CancellationTokenSource())
