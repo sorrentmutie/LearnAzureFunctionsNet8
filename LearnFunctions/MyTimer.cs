@@ -25,7 +25,7 @@ namespace LearnFunctions
 
         [Function("MyTimer")]
         [QueueOutput("secondqueue")]
-        public async Task<string> Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer)
+        public async Task<string> Run([TimerTrigger("0 */10 * * * *")] TimerInfo myTimer)
         {
             _logger.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
